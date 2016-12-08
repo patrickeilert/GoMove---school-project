@@ -2,13 +2,13 @@
 <div class="navbar-fixed">
     <nav role="navigation">
         <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">
+            <a id="logo-container" href="index.php" class="brand-logo">
                 <img class="responsive-img" src="img/logo_text_64px.png">
             </a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#home">OM</a></li>
-                <li><a href="#">OPRET</a></li>
-                <li><a href="#">LOG IND</a></li>
+                <li><a href="#info">OM</a></li>
+                <li><a href="opret.php">OPRET</a></li>
+                <li><a href="logon.php">LOG IND</a></li>
             </ul>
 
             <ul id="nav-mobile" class="side-nav">
