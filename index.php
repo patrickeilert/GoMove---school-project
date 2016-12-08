@@ -10,6 +10,7 @@
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
+        <?php include 'nav.php'; ?>
         <div class="section no-pad-bot" id="home">
             <div class="container">
                 <h1 class="header center">GoMove</h1>
