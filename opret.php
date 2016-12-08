@@ -51,23 +51,26 @@
                             <div class="col s2"></div>
                             <div class="input-field col s3">
                                 <form action="#">
-                                <div class="file-field input-field">
-                                  <div class="btn">
-                                    <span>Vælg</span>
-                                    <input type="file">
-                                  </div>
-                                  <div class="file-path-wrapper">
-                                    <input class="file-path validate" placeholder="Profilbillede" type="text">
-                                  </div>
-                                </div>
-  </form>
+                                    <div class="file-field input-field">
+                                      <div class="btn">
+                                        <span>Vælg</span>
+                                        <input type="file">
+                                      </div>
+                                      <div class="file-path-wrapper">
+                                        <input class="file-path validate" placeholder="Profilbillede" type="text">
+                                      </div>
+                                    </div>
+                                </form>
                             </div>
                             <div class="col s2"></div>
-                        </div>          
-                            
-                    </form>
-                    <div class="row center"
+                        </div>                 
+                    </form>  
                 </div>
+                <div class="row center">
+                    <a class="waves-effect waves-light btn">Opret</a>
+                    <a class="waves-effect waves-light btn">Facebook</a>
+                    <a class="waves-effect waves-light btn">Google+</a>   
+                </div>  
             </div>
         </div> 
         <!--  Scripts-->
