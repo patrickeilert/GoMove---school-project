@@ -10,7 +10,7 @@
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
-        <?php include 'nav.php'; ?>
+        <?php include 'nav_logged_in.php'; ?>
         <div class="section no-pad-bot" id="home">
             <div class="container">
                 <h1 class="header center">GoMove</h1>
@@ -24,7 +24,6 @@
                     <a href="#" class="waves-effect waves-light btn-large" id="button">Jeg hjælper!</a>
                     <a href="#" class="waves-effect waves-light btn-large" id="button">Jeg flytter!</a>
                 </div>
-                
             </div>
         </div>
         <div class="section" id="info">

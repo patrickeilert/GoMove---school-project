@@ -7,7 +7,7 @@
             </a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#info">OM</a></li>
-                <li><a href="opret.php">OPRET</a></li>
+                <li><a href="opret_profil.php">OPRET</a></li>
                 <li><a href="logon.php">LOG IND</a></li>
             </ul>
 
