@@ -33,9 +33,9 @@
                             <div class="col s4"></div> 
                         </div>
                         <div class="row center">
-                            <a class="waves-effect waves-light btn">Log ind</a>
-                            <a class="waves-effect waves-light btn">Facebook</a>
-                            <a class="waves-effect waves-light btn">Google+</a>   
+                            <a class="waves-effect waves-light btn" id="buttonLogon">Log ind</a>
+                            <a class="waves-effect waves-light btn" id="buttonFB">Facebook</a>
+                            <a class="waves-effect waves-light btn" id="buttonG">Google+</a>   
                         </div>     
                     </form>
                 </div>

@@ -56,6 +56,23 @@ a#button:hover {
      background-color: #2bbbad;
 }
 
+a#buttonLogon {
+    border-radius: 100px;
+    margin: 0 2% 0 1%;
+    background-color: #FF9800;
+}
+
+a#buttonFB {
+    border-radius: 100px;
+    margin: 0 0 0 1%;
+    background-color: #0062ff;
+}
+
+a#buttonG {
+    border-radius: 100px;
+    margin: 0 1% 0 0;
+    background-color: #f40505;
+}
 /*
 .fixed-action-btn {
   position: fixed;
