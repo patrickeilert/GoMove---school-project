@@ -97,50 +97,13 @@
                             <div class="col s3">
                                
                             </div>
-                        </div>
-                        
-                        
-                        <!-- <div class="row">
-                            <div class="col s2"></div>
-                            <div class="input-field col s3">
-                                <input id="email" type="email" class="validate">
-                                <label for="email" data-error="wrong" data-success="right">Email</label>
-                            </div>
-                            <div class="col s2"></div>
-                            <div class="input-field col s3">
-                                <input id="nr" type="text" class="validate">
-                                <label for="nr">Nr.</label>
-                            </div>
-                            <div class="col s2"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col s2"></div>
-                            <div class="input-field col s3">
-                                <input id="password" type="password" class="validate">
-                                <label for="password">Password</label>
-                            </div>
-                            <div class="col s2"></div>
-                            <div class="input-field col s3">
-                                <form action="#">
-                                    <div class="file-field input-field">
-                                      <div class="btn">
-                                        <span>Vælg</span>
-                                        <input type="file">
-                                      </div>
-                                      <div class="file-path-wrapper">
-                                        <input class="file-path validate" placeholder="Profilbillede" type="text">
-                                      </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col s2"></div>
-                        </div> -->                 
+                        </div>            
                     </form>  
                 </div>
                 <div class="row center">
-                    <a class="waves-effect waves-light btn">Opret</a>
-                    <a class="waves-effect waves-light btn">Facebook</a>
-                    <a class="waves-effect waves-light btn">Google+</a>   
+                    <a class="waves-effect waves-light btn" id="buttonLogon">Opret</a>
+                    <a class="waves-effect waves-light btn" id="buttonFB">Facebook</a>
+                    <a class="waves-effect waves-light btn" id="buttonG">Google+</a>   
                 </div> 
                 
             </div>

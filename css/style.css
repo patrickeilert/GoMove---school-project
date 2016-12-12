@@ -65,13 +65,13 @@ a#buttonLogon {
 a#buttonFB {
     border-radius: 100px;
     margin: 0 0 0 1%;
-    background-color: #0062ff;
+    background-color: #3b5998;
 }
 
 a#buttonG {
     border-radius: 100px;
     margin: 0 1% 0 0;
-    background-color: #f40505;
+    background-color: #d34836;
 }
 /*
 .fixed-action-btn {
