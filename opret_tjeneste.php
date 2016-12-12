@@ -13,27 +13,15 @@
         <?php include 'nav.php'; ?>
         <div class="section" id="login">
             <div class="container">
-                <h1 class="header center">Opret bruger</h1>
+                <h1 class="header center black-text">Opret tjeneste</h1>
+                <h5 class="header center">Vælg ...</h5>
                 <div class="row">
                     <form action="#" class="col s12">
                         <div class="row">
                             <div class="col s2"></div>
                             <div class="input-field col s3">
-                                <input id="name" type="text" class="validate">
-                                <label for="name">Navn</label>
-                            </div>
-                            <div class="col s2"></div>
-                            <div class="input-field col s3">
                                 <input id="gade" type="text" class="validate">
-                                <label for="gade">Gade</label>
-                            </div>
-                            <div class="col s2"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col s2"></div>
-                            <div class="input-field col s3">
-                                <input id="email" type="email" class="validate">
-                                <label for="email" data-error="wrong" data-success="right">Email</label>
+                                <label for="name">Gade</label>
                             </div>
                             <div class="col s2"></div>
                             <div class="input-field col s3">
@@ -42,34 +30,40 @@
                             </div>
                             <div class="col s2"></div>
                         </div>
+                        
                         <div class="row">
                             <div class="col s2"></div>
-                            <div class="input-field col s3">
-                                <input id="password" type="password" class="validate">
-                                <label for="password">Password</label>
+                            <div class="input-field col s2">
+                                <p>
+                                    <input type="checkbox" id="bil"/>
+                                    <label for="bil">Bil</label>
+                                </p>
                             </div>
-                            <div class="col s2"></div>
-                            <div class="input-field col s3">
-                                <form action="#">
-                                    <div class="file-field input-field">
-                                      <div class="btn">
-                                        <span>Vælg</span>
-                                        <input type="file">
-                                      </div>
-                                      <div class="file-path-wrapper">
-                                        <input class="file-path validate" placeholder="Profilbillede" type="text">
-                                      </div>
-                                    </div>
-                                </form>
+                            <div class="input-field col s2">
+                                <p>
+                                    <input type="checkbox" id="chauf"/>
+                                    <label for="chauf">Chauffør</label>
+                                </p>
                             </div>
-                            <div class="col s2"></div>
+                            <div class="input-field col s2">
+                                <p>
+                                    <input type="checkbox" id="muskler"/>
+                                    <label for="muskler">Muskler</label>
+                                </p>
+                            </div>
+                            <div class="input-field col s2">
+                                <p>
+                                    <input type="checkbox" id="trailer"/>
+                                    <label for="trailer">Trailer</label>
+                                </p>
+                            </div>
                         </div>                 
                     </form>  
                 </div>
                 <div class="row center">
-                    <a class="waves-effect waves-light btn">Opret</a>
-                    <a class="waves-effect waves-light btn">Facebook</a>
-                    <a class="waves-effect waves-light btn">Google+</a>   
+                    <a class="waves-effect waves-light btn" id="buttonLogon">Opret</a>
+                    <a class="waves-effect waves-light btn" id="buttonFB">Facebook</a>
+                    <a class="waves-effect waves-light btn" id="buttonG">Google+</a>   
                 </div>  
             </div>
         </div> 
