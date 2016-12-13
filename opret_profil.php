@@ -1,3 +1,38 @@
+
+
+<?php 
+
+session_start();
+
+if( isset($_SESSION['user_id']) ){
+    header("Location: index.php");
+}
+
+require 'dbcon.php';
+
+$message = '';
+
+if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name'])):
+    
+    // Enter the new user in the database
+    $sql = "INSERT INTO User (E-mail, Password, Name) VALUES (:E-mail, :Password, Name)";
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bindParam(':email', $_POST['email']);
+    $stmt->bindParam(':password', password_hash($_POST['password'], PASSWORD_BCRYPT));
+
+    if($stmt->execute()):
+        $message = 'Succesfully created new user';
+    else:
+        $message = 'Sorry there has been an error';
+    endif;        
+
+endif;
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="da">
     <head>
@@ -10,12 +45,14 @@
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
-        <?php include 'nav.php'; ?>
+        <?php include 'nav.php';
+        
+?>
         <div class="section" id="login">
             <div class="container">
                 <h1 class="header center">Opret bruger</h1>
                 <div class="row">
-                    <form action="#" class="col s12">
+                    <form action="opret_profil.php" method="POST" class="col s12">
                         <div class="row">
                             <div class="col s2"></div>
                             <div class="input-field col s3">
@@ -48,9 +85,17 @@
                                 <input id="password" type="password" class="validate">
                                 <label for="password">Password</label>
                             </div>
+                            
                             <div class="col s2"></div>
                             <div class="input-field col s3">
-                                <form action="#">
+                                <select name="zipcode" value="Zipcode">
+                                    
+                            </div>
+                            <div class="col s2">
+                                
+                            </div>
+                            <div class="col s2"></div>
+                            <div class="col s3">
                                     <div class="file-field input-field">
                                       <div class="btn">
                                         <span>Vælg</span>
@@ -60,17 +105,20 @@
                                         <input class="file-path validate" placeholder="Profilbillede" type="text">
                                       </div>
                                     </div>
-                                </form>
+                               
                             </div>
-                            <div class="col s2"></div>
+                            <div class="row center col s12">
+                                <a class="waves-effect waves-light btn" id="buttonLogon" type="submit">Opret</a>
+                                <a class="waves-effect waves-light btn" id="buttonFB">Facebook</a>
+                                <a class="waves-effect waves-light btn" id="buttonG">Google+</a>   
+                            </div>  
+                        <?php if(!empty($message)): ?>
+		                <p><?= $message ?></p>
+	                    <?php endif; ?>
                         </div>                 
                     </form>  
                 </div>
-                <div class="row center">
-                    <a class="waves-effect waves-light btn" id="buttonLogon">Opret</a>
-                    <a class="waves-effect waves-light btn" id="buttonFB">Facebook</a>
-                    <a class="waves-effect waves-light btn" id="buttonG">Google+</a>   
-                </div>  
+                
             </div>
         </div> 
         <!--  Scripts-->
