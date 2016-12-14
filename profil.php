@@ -13,7 +13,7 @@
         <?php include 'nav.php'; ?>
         <div class="section" id="login">
             <div class="container">
-                <h1 class="header center">Opret bruger lalalal</h1>
+                <h1 class="header center">Opret bruger</h1>
                 <div class="row">
                     <form action="#" class="col s12">
                         <div class="row">
