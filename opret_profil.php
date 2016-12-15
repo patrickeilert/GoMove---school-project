@@ -116,7 +116,7 @@ endif;
                                 <div class="file-field input-field">
                                     <div class="btn">
                                         <span>Vælg</span>
-                                        <input type="file">
+                                        <input type="file" name="fileToUpload">
                                     </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" placeholder="Profilbillede" type="text">
