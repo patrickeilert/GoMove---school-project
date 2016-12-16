@@ -12,7 +12,7 @@
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     </head>
     <body>
-        <?php include 'nav.php'; ?>
+        <?php include 'nav_logged_in.php'; ?>
         <div class="section" id="login">
             <div class="container">
                 <h1 class="header center black-text">Opret tjeneste</h1>

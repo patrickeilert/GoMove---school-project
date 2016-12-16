@@ -6,10 +6,10 @@
                 <img class="responsive-img" src="img/logo_text_64px.png">
             </a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="#info">PROFIL</a></li>
+                <li><a href="#">PROFIL</a></li>
                 <li><a href="opret_flyt.php">OPRET FLYTNING</a></li>
                 <li><a href="opret_tjeneste.php">OPRET TJENESTE</a></li>
-                <li><a href="opret.php">LOG UD</a></li>
+                <li><a href="logout.php">LOG UD</a></li>
                 
                 <!-- <li>
                     <div class="fixed-action-btn horizontal click-to-toggle">
