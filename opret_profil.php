@@ -112,14 +112,6 @@ if(isset($_POST['submit'])){
                             </div>
                             <div class="col s2"></div>
                             <div class="input-field col s3">
-                               
-                            
-                            </div>
-                            <div class="col s2"></div>
-                        </div>
-                        <div class="row">
-                            <div class="col s2"></div>
-                            <div class="input-field col s3">
                                 <input name="password_confirm" required="required" type="password" id="password_confirm" oninput="check(this)" />
                                 <script language='javascript' type='text/javascript'>
                                     function check(input) {
@@ -132,6 +124,13 @@ if(isset($_POST['submit'])){
                                     }
                                 </script>
                                 <label for="password">Bekræft password</label>
+                            </div>
+                            <div class="col s2"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col s2"></div>
+                            <div class="input-field col s3">
+                                
                             </div>
                             <div class="col s2"></div>
                             <div class="col s3">
