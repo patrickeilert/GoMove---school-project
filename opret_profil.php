@@ -1,41 +1,51 @@
 
 <?php 
 
+require 'dbcon.php';
+
+$message = '';
+
 session_start();
 
 if( isset($_SESSION['user_id'])){
     header("location: index.php");
 }
 
-require 'dbcon.php';
 
-$message = '';
-
-if(!empty($_POST['email']) && !empty($_POST['password'])):
+if(isset($_POST['submit'])){
+    
+    if(!empty($_POST['email']) && !empty($_POST['password'])):
 
 // Enter the new user in the database
 
-    $sql = "INSERT INTO user (name, email, password, street, house_number, zipcode_zipcode) VALUES (:name, :email, :password, :street, :house_number, :zipcode_zipcode)";
+    $sql = "INSERT INTO user (name, email, password, address, zipcode_zipcode) VALUES (:name, :email, :password, :address, :zipcode_zipcode)";
         $stmt = $conn->prepare($sql);
     
     $stmt->bindParam(':name', $_POST['name']);
     $stmt->bindParam(':password', password_hash($_POST['password'], PASSWORD_BCRYPT));
     $stmt->bindParam(':email', $_POST['email']);
     
-    $stmt->bindParam(':street', $_POST['street']);
-    $stmt->bindParam(':house_number', $_POST['house_number']);
+    $stmt->bindParam(':address', $_POST['address']);
     $stmt->bindParam(':zipcode_zipcode', $_POST['zipcode']);
     
 
-    if($stmt->execute() ):
-        //die('Succes');
-        $message = 'Successfully created new user';
-    else:
-        //die('Fail');
-        $message = 'Sorry, there must have been an issue creating your account';
-    endif;
+        if($stmt->execute() ):
+            //die('Succes');
+            $message = 'Successfully created new user';
+        else:
+            //die('Fail');
+            $message = 'Sorry, there must have been an issue creating your account';
+        endif;
 
-endif;
+    endif;
+    
+}
+
+
+
+
+
+
 
 ?>
 
@@ -74,8 +84,8 @@ endif;
                             </div>
                             <div class="col s2"></div>
                             <div class="input-field col s3">
-                                <input id="gade" type="text" name="street" class="validate">
-                                <label for="gade">Gade</label>
+                                <input id="gade" type="text" name="address" class="validate">
+                                <label for="gade">Adresse</label>
                             </div>
                             <div class="col s2"></div>
                         </div>
@@ -87,8 +97,7 @@ endif;
                             </div>
                             <div class="col s2"></div>
                             <div class="input-field col s3">
-                                <input id="nr" type="text" name="house_number" class="validate">
-                                <label for="nr">Nr.</label>
+                                
                             </div>
                             <div class="col s2"></div>
                         </div>
@@ -116,7 +125,7 @@ endif;
                                 <div class="file-field input-field">
                                     <div class="btn">
                                         <span>Vælg</span>
-                                        <input type="file" name="fileToUpload">
+                                        <input name="fileToUpload" id="fileToUpload" type="file">
                                     </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" placeholder="Profilbillede" type="text">
@@ -127,7 +136,7 @@ endif;
                         <div class="row">
                             <div class="col s2"></div>
                             <div class="col s3">   
-                                <input type="submit" value="Opret">
+                                <input type="submit" name="submit" value="Opret">
                             </div>    
                         </div>        
                     </form>
