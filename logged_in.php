@@ -24,8 +24,6 @@ if( isset($_SESSION['user_id']) ){
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name="description" content="Er dine venner også træt af at bære kasser ned for 4. sal, mangler du penge til weekendens bytur - Hos GoMove hjælper vi hinanden nemt og billigt">
         <meta name="keywords" content="move, nemt, billigt, hjælp, tjen penge">
         <title>GoMove - din flytteportal</title>
