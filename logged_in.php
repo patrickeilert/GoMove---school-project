@@ -44,7 +44,7 @@ if( isset($_SESSION['user_id']) ){
                     <!-- <h5 class="header col s12 light">Flyt dig Kaj - jeg vil gerne hjælpe</h5> -->
                 </div>
                 <div class="row center">
-                    <img class="responsive-img" src="img/logo_cirkel.png" width="40%">
+                    <img class="responsive-img" src="img/forside_cirkel.png" width="40%">
                 </div>
                 <div class="row center">
                     <a href="#" class="waves-effect waves-light btn-large" id="button">Jeg hjælper!</a>
