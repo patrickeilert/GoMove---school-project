@@ -23,7 +23,7 @@
     </head>
     <body>
        
-        <?php include 'nav.php'; ?>
+        <?php include 'nav_logged_in.php'; ?>
         <div class="section" id="login">
             <div class="container">
                 <h1 class="header center">Opret flytning</h1>

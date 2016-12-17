@@ -1,10 +1,36 @@
+<?php 
+
+session_start();
+
+require 'dbcon.php';
+if( isset($_SESSION['user_id']) ){
+    $records = $conn->prepare('SELECT user_id, email, password FROM user WHERE id = :id');
+    $records->bindParam(':id', $_SESSION['user_id']);
+    $records->execute();
+    $results = $records->fetch(PDO::FETCH_ASSOC);
+    
+    $user = NULL; 
+    
+    if( count($results) > 0){
+        $user = $results;
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="da">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<<<<<<< HEAD
         <meta name="description" content="Er dine venner også træt af at bære kasser ned for 4. sal, mangler du penge til weekendens bytur - Hos GoMove hjælper vi hinanden nemt og billigt">
         <meta name="keywords" content="move, nemt, billigt, hjælp, tjen penge">
+=======
+        <meta name="description" content="Er dine venner også trætte af at bære kasser ned for 4. sal, mangler du penge til weekendens bytur - Hos GoMove hjælper vi hinanden nemt og billigt">
+        <meta name="keywords" content="move, nemt, billigt, hjælp">
+>>>>>>> patrickeilert/master
         <title>GoMove - din flytteportal</title>
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,6 +39,9 @@
     </head>
     <body>
         <?php include 'nav_logged_in.php'; ?>
+        
+        
+        
         <div class="section no-pad-bot" id="home">
             <div class="container">
                 <h1 class="header center">GoMove</h1>

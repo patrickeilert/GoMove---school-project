@@ -1,14 +1,17 @@
 <?php 
 
 session_start();
+ob_start();
 
 if( isset($_SESSION['user_id']) ){
-    header("Location: index.php");
+    header("Location: logged_in.php");
 }
 
-require 'dbcon.php';
+
 
 if(!empty($_POST['email']) && !empty($_POST['password'])):
+
+    require 'dbcon.php';
 
     $records = $conn->prepare('SELECT user_id, email, password FROM user WHERE email = :email');
     $records->bindParam(':email', $_POST['email']);
@@ -20,7 +23,8 @@ if(!empty($_POST['email']) && !empty($_POST['password'])):
     if(count($results) > 0 && password_verify($_POST['password'], $results['password'])){
         
         $_SESSION['user_id'] = $results['id'];
-        header("Location: index.php");
+        
+        header('Location: logged_in.php');
         
     } else {
         
@@ -103,3 +107,4 @@ endif;
         <script src="js/init.js"></script>       
     </body>
 </html>
+<?php ob_end_flush(); ?>
