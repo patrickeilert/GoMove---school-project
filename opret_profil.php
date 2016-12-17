@@ -92,15 +92,8 @@ if(isset($_POST['submit'])){
                             </div>
                             <div class="col s2"></div>
                             <div class="input-field col s3">
-                                <select>
-                                    <option value="" disabled selected>Choose your option</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                </select>
-                                <label>Materialize Select</label>
-                                <!--<input id="postnr" type="text" name="zipcode" class="validate">
-                                <label for="postnr">Postnummer</label> -->
+                                <input id="postnr" type="text" name="zipcode" class="validate">
+                                <label for="postnr">Postnummer</label>
                             </div>
                             <div class="col s2"></div>
                         </div>
@@ -148,7 +141,7 @@ if(isset($_POST['submit'])){
                         <div class="row">
                             <div class="col s2"></div>
                             <div class="col s3">   
-                                <input type="submit" name="submit" value="Opret">
+                                <input type="submit" name="submit" value="Opret" class="waves-effect waves-light btn" id="buttonLogon">
                             </div>    
                         </div>        
                     </form>

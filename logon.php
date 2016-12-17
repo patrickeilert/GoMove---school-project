@@ -50,9 +50,7 @@ endif;
     <body>
         <?php include 'nav.php'; ?>
         
-         <?php if(!empty($message)): ?>
-        <p><?= $message ?></p>
-    <?php endif; ?>
+         
     <!-- 
     <h1>Login</h1>
     <span>or <a href="register.php">register here</a></span>
@@ -76,8 +74,8 @@ endif;
                         <div class="row">
                             <div class="col s4"></div>
                             <div class="input-field col s4">
-                                <input id="email" type="text" name="email" class="validate">
-                                <label for="email" data-error="wrong" data-success="right">E-mail</label>
+                                <input id="email" type="email" name="email" class="validate">
+                                <label for="email" data-error="wrong" data-success="right">Email</label>
                             </div>
                             <div class="col s4"></div>
                             </div>
@@ -90,9 +88,10 @@ endif;
                             <div class="col s4"></div> 
                         </div>
                         <div class="row center">
-                            <input type="submit">   
+                            <input type="submit" value="Log ind" class="waves-effect waves-light btn" id="buttonLogon">
+                          
                             <!--
-                            <a class="waves-effect waves-light btn" id="buttonLogon">Log ind</a>
+                            
                             <a class="waves-effect waves-light btn" id="buttonFB">Facebook</a>
                             <a class="waves-effect waves-light btn" id="buttonG">Google+</a>
                             -->   
