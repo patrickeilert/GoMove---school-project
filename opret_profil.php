@@ -85,20 +85,29 @@ if(isset($_POST['submit'])){
                             </div>
                             <div class="col s2"></div>
                             <div class="input-field col s3">
-                                <input id="gade" type="text" name="address" class="validate">
-                                <label for="gade">Adresse</label>
+                                <input id="email" type="email" name="email" class="validate">
+                                <label for="email" data-error="wrong" data-success="right">Email</label>    
                             </div>
                             <div class="col s2"></div>
                         </div>
                         <div class="row">
                             <div class="col s2"></div>
                             <div class="input-field col s3">
-                                <input id="email" type="email" name="email" class="validate">
-                                <label for="email" data-error="wrong" data-success="right">Email</label>
+                                <input id="gade" type="text" name="address" class="validate">
+                                <label for="gade">Adresse</label>   
+                                
                             </div>
                             <div class="col s2"></div>
                             <div class="input-field col s3">
-                                
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label>Materialize Select</label>
+                                <!--<input id="postnr" type="text" name="zipcode" class="validate">
+                                <label for="postnr">Postnummer</label> -->
                             </div>
                             <div class="col s2"></div>
                         </div>
@@ -111,16 +120,7 @@ if(isset($_POST['submit'])){
                             <div class="col s2"></div>
                             <div class="input-field col s3">
                                
-                            <select>
-                              <option value="" disabled selected>Choose your option</option>
-                              <option value="1">Option 1</option>
-                              <option value="2">Option 2</option>
-                              <option value="3">Option 3</option>
-                            </select>
-                            <label>Materialize Select</label>
-  
-                                <!--<input id="postnr" type="text" name="zipcode" class="validate">
-                                <label for="postnr">Postnummer</label> -->
+                            
                             </div>
                             <div class="col s2"></div>
                         </div>

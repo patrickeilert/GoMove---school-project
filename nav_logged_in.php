@@ -3,7 +3,7 @@
     <nav role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="index.php" class="brand-logo">
-                <img class="responsive-img" src="img/logo_text_64px.png">
+                <img class="responsive-img" src="img/menulogo.png">
             </a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">PROFIL</a></li>
