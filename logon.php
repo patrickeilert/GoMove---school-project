@@ -68,7 +68,7 @@ endif;
         
         <div class="section" id="login">
             <div class="container">
-                <h1 class="header center">Log ind</h1>
+                <h1 class="header center"><span style="color:#404040">Log ind</span></h1>
                 <div class="row">
                     <form action="logon.php" method="post" class="col s12">
                         <div class="row">
@@ -88,13 +88,13 @@ endif;
                             <div class="col s4"></div> 
                         </div>
                         <div class="row center">
-                            <input type="submit" value="Log ind" class="waves-effect waves-light btn" id="buttonLogon">
-                          
-                            <!--
-                            
-                            <a class="waves-effect waves-light btn" id="buttonFB">Facebook</a>
-                            <a class="waves-effect waves-light btn" id="buttonG">Google+</a>
-                            -->   
+                            <div id="button">
+                            <!--<input type="submit" value="Log ind"> */-->
+                             <button class="btn waves-effect waves-light" type="submit" name="action">Log ind
+                            </button>
+                            <a class="waves-effect waves-light btn">Facebook</a>
+                            <a class="waves-effect waves-light btn">Google+</a>
+                          </div>
                         </div>     
                     </form>
                 </div>

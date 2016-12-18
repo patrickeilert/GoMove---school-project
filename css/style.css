@@ -8,6 +8,7 @@
 
 html, body {
     height: 100%;
+
 }
 
 
@@ -27,8 +28,12 @@ nav {
 }
 
 h1 {
-    color: white;
     font-weight: 100;
+    color:white;
+}
+
+p{
+color:#404040;
 }
 
 #home {
@@ -44,7 +49,54 @@ h1 {
     height: 100%;
     background-color: #e2e2e2;;
 }
+/*navigation */
+li a {
+    text-transform: uppercase;
+}
 
+/* knapper på forsiden */
+#button a{
+    border-radius: 100px;
+    margin: 3% 3% 0 3%;
+    background-color: #FF9800;   
+}
+
+#button a:hover{
+     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+     background-color: #2bbbad; 
+}
+
+/*log ind knap*/
+#button button{
+    border-radius: 100px;
+    margin: 3% 3% 0 3%;
+    background-color: #FF9800;  
+}
+
+#button button:hover{
+     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+     background-color: #2bbbad; 
+}
+
+/* logind knappen 
+input{
+    border-radius: 100px;
+    background-color: #FF9800; 
+    padding: 10px 20px 10px 20px;
+    border: none;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+input[type=submit]:hover{
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+    background-color: #2bbbad;
+}
+
+input[type=submit]{
+    color: white;
+    text-transform: uppercase;
+}*/
+
+/*
 a#button {
     border-radius: 100px;
     margin: 3% 3% 0 3%;
