@@ -10,9 +10,6 @@ session_start();
 if( isset($_SESSION['user_id'])){
     header("location: index.php");
 }
-
-
-if(isset($_POST['submit'])){
     
     
     if(!empty($_POST['email']) && !empty($_POST['password'])):
@@ -32,15 +29,14 @@ if(isset($_POST['submit'])){
 
         if($stmt->execute() ):
             //die('Succes');
-            $message = 'Successfully created new user';
+            $message = 'Tak - du kan nu logge ind.';
         else:
             //die('Fail');
-            $message = 'Sorry, there must have been an issue creating your account';
+            $message = 'Hov, der skete en fejl. Prøv venligst igen.';
         endif;
 
     endif;
     
-}
 
 ?>
 
@@ -59,15 +55,10 @@ if(isset($_POST['submit'])){
     </head>
     <body>
         <?php include 'nav.php';?>
-    
-        <?php
-            if(!empty($message)): ?>
-            <p><?= $message ?></p>
-        <?php endif; ?>
               
         <div class="section" id="login">
             <div class="container">
-                <h1>Opret bruger</h1>
+                <h1 class="header center"><span style="color:#404040">Opret bruger</span></h1>
                 <div class="row">
                     <form action="opret_profil.php" method="POST" class="col s12">
                         <div class="row">
@@ -109,7 +100,7 @@ if(isset($_POST['submit'])){
                                 <script language='javascript' type='text/javascript'>
                                     function check(input) {
                                         if (input.value != document.getElementById('password').value) {
-                                            input.setCustomValidity('Password Must be Matching.');
+                                            input.setCustomValidity('Hovsa, dine passwords er ikke ens.');
                                         } else {
                                             // input is valid -- reset the error message
                                             input.setCustomValidity('');
@@ -120,7 +111,7 @@ if(isset($_POST['submit'])){
                             </div>
                             <div class="col s2"></div>
                         </div>
-                        <div class="row">
+                        <!--<div class="row">
                             <div class="col s2"></div>
                             <div class="input-field col s3">
                                 
@@ -137,12 +128,16 @@ if(isset($_POST['submit'])){
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col s2"></div>
-                            <div class="col s3">   
-                                <input type="submit" name="submit" value="Opret" class="waves-effect waves-light btn" id="buttonLogon">
-                            </div>    
+                        </div> -->
+                        <div class="row center">
+                            <div id="button">
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Opret</button>
+                                <a class="waves-effect waves-light btn" style="background-color:#3b5998">Facebook</a>
+                                <a class="waves-effect waves-light btn" style="background-color:#d34836">Google+</a>
+                            </div>
+                            <?php if(!empty($message)): ?>
+                                <p><?= $message ?></p>
+                            <?php endif; ?>
                         </div>        
                     </form>
                 </div>

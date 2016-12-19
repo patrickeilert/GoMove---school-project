@@ -50,21 +50,6 @@ endif;
     <body>
         <?php include 'nav.php'; ?>
         
-         
-    <!-- 
-    <h1>Login</h1>
-    <span>or <a href="register.php">register here</a></span>
-     
-     <form action="login.php" method="post">
-        
-            <input type="text" placeholder="Enter your email" name="email">
-            <input type="password" placeholder="and password" name="password">
-            
-            <input type="submit">
-         
-         
-     </form>
-    -->   
         
         <div class="section" id="login">
             <div class="container">
@@ -89,10 +74,9 @@ endif;
                         </div>
                         <div class="row center">
                             <div id="button">
-                            <!--<input type="submit" value="Log ind"> */-->
                              <button class="btn waves-effect waves-light" type="submit" name="action">Log ind
                             </button>
-                            <a class="waves-effect waves-light btn">Facebook</a>
+                            <a class="waves-effect waves-light btn">Facebook</a> 
                             <a class="waves-effect waves-light btn">Google+</a>
                           </div>
                         </div>     
