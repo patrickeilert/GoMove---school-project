@@ -1,10 +1,17 @@
 <?php
-//forbindelse til databasen
+//forbindelse til databasen, både online og offline
 
 $server = 'localhost';
 $username = 'root';
 $password = 'root';
 $database = 'GoMove';
+
+/*
+$server = 'lykkeeilert.dk.mysql';
+$username = 'lykkeeilert_dk';
+$password = 'Q2KcraNm';
+$database = 'lykkeeilert_dk';
+*/
 
 try {
     $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);

@@ -24,8 +24,8 @@
                 </div>
                 <div class="row center">
                     <div id="button">
-                    <a href="#" class="waves-effect waves-light btn-large" >Jeg hjælper!</a>
-                    <a href="#" class="waves-effect waves-light btn-large" >Jeg flytter!</a>
+                    <a href="opret_profil.php" class="waves-effect waves-light btn-large">Jeg hjælper!</a>
+                    <a href="opret_profil.php" class="waves-effect waves-light btn-large">Jeg flytter!</a>
                     </div>
                 </div>
                 </div>

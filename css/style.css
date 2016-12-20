@@ -8,7 +8,6 @@
 
 html, body {
     height: 100%;
-
 }
 
 
@@ -49,6 +48,10 @@ color:#404040;
     height: 100%;
     background-color: #e2e2e2;;
 }
+
+#login {
+    height: 100%;
+}
 /*navigation */
 li a {
     text-transform: uppercase;
@@ -76,7 +79,6 @@ li a {
 #button button:hover{
      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
      background-color: #2bbbad; 
-
 }
 
 
