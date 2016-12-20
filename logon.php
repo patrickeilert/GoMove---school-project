@@ -76,14 +76,15 @@ endif;
                             <div id="button">
                              <button class="btn waves-effect waves-light" type="submit" name="action">Log ind
                             </button>
-                            <a class="waves-effect waves-light btn">Facebook</a> 
-                            <a class="waves-effect waves-light btn">Google+</a>
+                            <a class="waves-effect waves-light btn" style="background-color:#3b5998">Facebook</a> 
+                            <a class="waves-effect waves-light btn" style="background-color:#d34836">Google+</a>
                           </div>
                         </div>     
                     </form>
                 </div>
             </div>
         </div> 
+        
         <!--  Scripts-->
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.js"></script>

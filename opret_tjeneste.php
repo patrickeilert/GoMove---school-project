@@ -62,11 +62,9 @@
                         </div>                 
                     </form>  
                 </div>
-                <div class="row center">
-                    <a class="waves-effect waves-light btn" id="buttonLogon">Opret</a>
-                    <a class="waves-effect waves-light btn" id="buttonFB">Facebook</a>
-                    <a class="waves-effect waves-light btn" id="buttonG">Google+</a>   
-                </div>  
+                <div class="row center" id="button">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Opret flytning</button>
+                </div>       
             </div>
         </div> 
         <!--  Scripts-->

@@ -11,10 +11,10 @@ if( isset($_SESSION['user_id'])){
     header("location: index.php");
 }
     
-    
+    // Hvis input-felterne ikke er tomme, kør følgende: 
     if(!empty($_POST['email']) && !empty($_POST['password'])):
 
-// Enter the new user in the database
+    // Enter the new user in the database med sql statement INSERT INTO.
 
     $sql = "INSERT INTO user (name, email, password, address, zipcode_zipcode) VALUES (:name, :email, :password, :address, :zipcode_zipcode)";
         $stmt = $conn->prepare($sql);
@@ -26,7 +26,6 @@ if( isset($_SESSION['user_id'])){
     $stmt->bindParam(':address', $_POST['address']);
     $stmt->bindParam(':zipcode_zipcode', $_POST['zipcode']);
     
-
         if($stmt->execute() ):
             //die('Succes');
             $message = 'Tak - du kan nu logge ind.';
@@ -52,6 +51,16 @@ if( isset($_SESSION['user_id'])){
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>  
+        <script>
+            $(document).ready(function() {
+            $('select').material_select();
+            });
+            
+        </script> 
     </head>
     <body>
         <?php include 'nav.php';?>
@@ -111,7 +120,8 @@ if( isset($_SESSION['user_id'])){
                             </div>
                             <div class="col s2"></div>
                         </div>
-                        <!--<div class="row">
+                        <!-- Billede upload er udkommenteret, da det ville ville virke
+                        <div class="row">
                             <div class="col s2"></div>
                             <div class="input-field col s3">
                                 
@@ -135,31 +145,14 @@ if( isset($_SESSION['user_id'])){
                                 <a class="waves-effect waves-light btn" style="background-color:#3b5998">Facebook</a>
                                 <a class="waves-effect waves-light btn" style="background-color:#d34836">Google+</a>
                             </div>
+                            <!-- Når bruger har trykket på opret-knappen udskrives $message, som er defineret i forbindelse med php'en og sql'en i starten af dokumentet -->
                             <?php if(!empty($message)): ?>
-                                <p><?= $message ?></p>
+                                <h5 class="row center"><?= $message ?></h5>
                             <?php endif; ?>
                         </div>        
                     </form>
                 </div>
             </div>
-        </div>
-        <!-- 
-                               
-                            </div>
-                            <div class="row center col s12">
-                                <a class="waves-effect waves-light btn" id="buttonLogon" type="submit">Opret</a>
-                                <a class="waves-effect waves-light btn" id="buttonFB">Facebook</a>
-                                <a class="waves-effect waves-light btn" id="buttonG">Google+</a>   
-                            </div>
-                        </div>                 
-                    </form>  
-                </div>
-                
-            </div>
-        </div> -->
-        <!--  Scripts-->
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>       
+        </div> 
     </body>
 </html>
