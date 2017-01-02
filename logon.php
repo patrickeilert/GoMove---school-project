@@ -9,9 +9,9 @@ if( isset($_SESSION['user_id']) ){
 
 
 
-if(!empty($_POST['email']) && !empty($_POST['password'])):
+if(!empty($_POST['email']) && !empty($_POST['password'])): // hvis email ikke er tom og password log ind
 
-    require 'dbcon.php';
+    require 'dbcon.php'; // forbindelse til database
 
     $records = $conn->prepare('SELECT user_id, email, password FROM user WHERE email = :email');
     $records->bindParam(':email', $_POST['email']);
@@ -24,7 +24,7 @@ if(!empty($_POST['email']) && !empty($_POST['password'])):
         
         $_SESSION['user_id'] = $results['id'];
         
-        header('Location: logged_in.php');
+        header('Location: logged_in.php'); 
         
     } else {
         
