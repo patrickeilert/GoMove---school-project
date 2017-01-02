@@ -79,7 +79,7 @@ if( isset($_SESSION['user_id']) ){
                         <div class="icon-block">
                             <img class="responsive-img" src="img/info_hvordan.png" alt="Opret dig som bruger og flyt elelr hjælp allerede i dag">
                             <h5 class="center">Hvordan</h5>
-                            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+                            <p class="light">>For at kunne bruge GoMove skal du oprette dig som bruger. Du kan når som helst oprette en hjælpende hånd eller en flyting, bare indtast hvad du har brug for eller hvad du tilbyder og du er i gang. Se flytinger  i dit nabolag og kom dine nærmeste til undsætning eller se om der er en nabo der lige kan hjælpe med at få din nye sofa op i lejligheden. Lige meget hvad er GoMove løsningen.
                             </p>
                         </div>
                     </div>
