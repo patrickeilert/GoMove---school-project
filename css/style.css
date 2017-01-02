@@ -24,6 +24,7 @@ html, body {
 
 nav {
     background-color: #FF9800;
+    text-transform: uppercase;
 }
 
 h1 {

@@ -1,4 +1,4 @@
-<nav class="nacbar-fixed" role="navigation">
+<nav class="navbar-fixed" role="navigation">
     <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo">
             <img class="responsive-img" src="img/menulogo.png">
